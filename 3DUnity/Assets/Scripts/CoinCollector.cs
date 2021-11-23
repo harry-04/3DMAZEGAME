@@ -14,6 +14,9 @@ public class CoinCollector : MonoBehaviour
 
     public GameObject escape;
     public GameObject successScreen;
+    public GameObject gameOverScreen;
+
+    public GameObject monster;
 
     public bool hasCoin1BeenCollected;
     public bool hasCoin2BeenCollected;
@@ -62,6 +65,14 @@ public class CoinCollector : MonoBehaviour
         if (collision.gameObject.tag == ("Escape"))
         {
             successScreen.SetActive(true);
+            monster.SetActive(false);
+            Cursor.lockState = CursorLockMode.None;
+            Cursor.visible = true;
+        }
+
+        if (collision.gameObject.tag == ("Enemy"))
+        {
+            gameOverScreen.SetActive(true);
             Cursor.lockState = CursorLockMode.None;
             Cursor.visible = true;
         }

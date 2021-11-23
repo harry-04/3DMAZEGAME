@@ -9,6 +9,7 @@ TagManager:
   - Coin2
   - Coin3
   - Escape
+  - Enemy
   layers:
   - Default
   - TransparentFX
